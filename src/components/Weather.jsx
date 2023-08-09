@@ -1,11 +1,11 @@
 import React from "react";
-import { useWeatherContext } from "../context/Weather";
+import { useWeatherContext } from "../context/WeatherContext";
 
 const Weather = () => {
 
     const weather = useWeatherContext();
 
-    console.log("Container rerender");
+    
     if (weather.weatherData) {
 
         if(weather.weatherData.error){

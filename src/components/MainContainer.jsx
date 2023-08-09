@@ -1,5 +1,4 @@
 import React from "react";
-import Input from "./Input";
 import Weather from "./Weather";
 import Footer from "./Footer";
 

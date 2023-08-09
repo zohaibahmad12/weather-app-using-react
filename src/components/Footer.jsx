@@ -1,5 +1,5 @@
 import React from "react";
-import { useWeatherContext } from "../context/Weather";
+import { useWeatherContext } from "../context/WeatherContext";
 
 const Footer = () => {
 
