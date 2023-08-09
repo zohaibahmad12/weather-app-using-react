@@ -4,7 +4,7 @@ body{
 }
 .wrapper{
    
-    padding: 50px;
+    padding: 30px;
 }
 .main-container{
 
@@ -25,10 +25,17 @@ body{
   }
 
 .input-container{
+    background-color: #6cb2f5;
+    width: 40%;
+    margin: 0 auto;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    border-radius: 30px;
+
     display: flex;
     align-items: center;
     justify-content: space-around;
     padding: 20px;
+    margin-bottom: 20px;
 }
 
 .user-input{
@@ -104,7 +111,7 @@ body{
 .left{
     border-right: 2px solid #8fc0f7;
 }
-.footer-container div h3{
+.footer-container h3{
     color: #fafbfc;
     text-align: center;
     font-size: 25px;
@@ -120,5 +127,54 @@ body{
     color: #559bf3;
     font-size: 30px;
     color: #fafbfc;
-    margin-right: 20px;
+    margin-right: 5px;
 }
+
+.error-container{
+    padding: 20px;
+}
+.error-message{
+    color: white;
+    text-align: center;
+    
+}
+
+
+
+  @media screen and (max-width: 968px) {
+    .main-container,.input-container{
+     width: 55%;
+    }
+   
+   }
+
+   @media screen and (max-width: 768px) {
+    .main-container,.input-container{
+        width: 70%;
+       }
+
+    .footer-container i{
+        font-size: 20px;
+    }
+    .footer-container h3{
+        font-size: 18px;
+    }
+    .footer-container span{
+        font-size: 12px;
+    }
+    .search-button{
+       width: 30%;
+    }
+    .user-input{
+        width: 60%;
+    }
+   }
+
+
+   @media screen and (max-width: 468px) {
+    .main-container,.input-container{
+        width: 90%;
+       }
+
+   
+   }
