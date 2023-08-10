@@ -1,63 +1,74 @@
-body{
+body {
     background-color: #559bf3;
     font-family: Arial, Helvetica, sans-serif;
 }
-.wrapper{
-   
-    padding: 30px;
-}
-.main-container{
 
-    background-color: #6cb2f5;
-    width: 40%;
-    margin: 0 auto;
-    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
-    border-radius: 30px;
+.wrapper {
+
+    display: flex;
+    align-items: center;
+    height: 500px;
+    justify-content: space-around;
 
 }
 
 .main-container {
-    transition: transform 0.2s ease-in-out; /* Adding smooth transition */
-  }
-  
-  .main-container:hover {
-    transform: translate(0, -5px); /* Move 5px up on hover */
-  }
 
-.input-container{
+
     background-color: #6cb2f5;
     width: 40%;
-    margin: 0 auto;
     box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
     border-radius: 30px;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    padding: 20px;
-    margin-bottom: 20px;
 }
 
-.user-input{
+.main-container {
+    transition: transform 0.2s ease-in-out;
+    /* Adding smooth transition */
+}
+
+.main-container:hover {
+    transform: translate(0, -5px);
+    /* Move 5px up on hover */
+}
+
+
+
+.input-container {
+
     background-color: #6cb2f5;
-    width: 70%;
+    width: 30%;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+    padding: 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.user-input {
+    background-color: #6cb2f5;
+    width: 95%;
     padding: 10px;
     border: none;
     border-bottom: 2px solid #8fc0f7;
     color: #d4dee7;
     font-size: 18px;
+    margin-bottom: 10px;
 }
 
-.user-input::placeholder{
+.user-input::placeholder {
     color: #d4dee7;
     font-size: 16px;
-    
+
 }
-.user-input:focus{
-   outline: none;
+
+.user-input:focus {
+    outline: none;
 }
-.search-button{
-    width: 20%;
+
+.search-button {
+    width: 100%;
     padding: 12px;
     border: none;
     border-radius: 5px;
@@ -66,115 +77,126 @@ body{
     font-weight: bold;
 }
 
+.current-location-weather {
+    width: 100%;
+    margin-top: 50px;
+    border-top: 2px solid #8fc0f7;
+    padding: 30px;
+}
 
 
-.icon-container{
+.icon-container {
     display: flex;
     align-items: center;
 }
 
-.weather-icon{
+.weather-icon {
     width: 25%;
     margin: 0 auto;
 }
 
-.temperature,.condition,.location{
+.temperature,
+.condition,
+.location {
     color: #fafbfc;
     text-align: center;
     font-size: 40px;
     margin-top: 0px;
     margin-bottom: 5px;
 }
-.condition{
+
+.condition {
     font-size: 20px;
     margin-top: 0px;
 }
-.location{
+
+.location {
     margin-top: 40px;
     font-size: 18px;
 }
 
-.footer-container{
+.footer-container {
     display: flex;
     margin-top: 20px;
 }
-.left,.right{
+
+.left,
+.right {
     display: flex;
     align-items: center;
     justify-content: center;
     width: 50%;
     border-top: 2px solid #8fc0f7;
     padding: 0px;
-    
+
 }
 
-.left{
+.left {
     border-right: 2px solid #8fc0f7;
 }
-.footer-container h3{
+
+.footer-container h3 {
     color: #fafbfc;
     text-align: center;
-    font-size: 25px;
+    font-size: 20px;
     margin: 10px;
 
 }
 
-.footer-container span{
+.footer-container span {
     font-size: 14px;
 }
 
-.footer-container i{
+.footer-container i {
     color: #559bf3;
-    font-size: 30px;
+    font-size: 25px;
     color: #fafbfc;
     margin-right: 5px;
 }
 
-.error-container{
+.error-container {
     padding: 20px;
 }
-.error-message{
+
+.error-message {
     color: white;
     text-align: center;
-    
+
 }
 
 
 
-  @media screen and (max-width: 968px) {
-    .main-container,.input-container{
-     width: 55%;
-    }
-   
-   }
-
-   @media screen and (max-width: 768px) {
-    .main-container,.input-container{
-        width: 70%;
-       }
-
-    .footer-container i{
-        font-size: 20px;
-    }
-    .footer-container h3{
-        font-size: 18px;
-    }
-    .footer-container span{
-        font-size: 12px;
-    }
-    .search-button{
-       width: 30%;
-    }
-    .user-input{
-        width: 60%;
-    }
-   }
 
 
-   @media screen and (max-width: 468px) {
-    .main-container,.input-container{
-        width: 90%;
-       }
 
-   
-   }
+
+@media screen and (max-width: 768px) {
+
+  .wrapper{
+    display: block;
+  }
+  .main-container{
+    margin: 50px auto;
+    width: 80%;
+  }
+
+  .input-container{
+    margin: 50px auto;
+    width: 70%;
+  }
+
+
+}
+
+@media screen and (max-width: 468px) {
+
+    .wrapper{
+      display: block;
+    }
+    .main-container{
+      margin: 20px auto;
+      width: 90%;
+    }
+  
+  
+  }

@@ -13,6 +13,7 @@ export const getWeatherDataForCity = async (city) => {
 
 }
 
+
 export const getWeatherDataForLocation = async (position) => {
  
     try {

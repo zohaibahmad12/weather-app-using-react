@@ -9,22 +9,19 @@ const Input = () => {
 
 
 
-    const fetchCurrentLocationWeather = async (position) => {
+    const fetchCurrentLocationWeather = () => {
 
+        weather.setWeatherData(null);
+        weather.setIsLoading(true);
         navigator.geolocation.getCurrentPosition(async (position) => {
 
             const weatherData = await getWeatherDataForLocation(position);
             weather.setWeatherData(weatherData);
+            weather.setIsLoading(false);
         })
 
     }
 
-    useEffect(() => {
-
-        fetchCurrentLocationWeather();
-
-
-    }, []);
 
 
 
@@ -47,7 +44,7 @@ const Input = () => {
         }
         else {
             alert("Please Enter a City Name...");
-            fetchCurrentLocationWeather();
+
         }
 
 
@@ -55,10 +52,16 @@ const Input = () => {
 
 
     return (
+
         <div className="input-container">
             <input value={weather.userInput} onChange={handleInputChange} placeholder="Enter a City Name" className="user-input" type="text" />
             <button className="search-button" onClick={fetchWeatherData} >Search</button>
+
+            <div className="current-location-weather">
+                <button className="search-button" onClick={fetchCurrentLocationWeather} >Use Current Location</button>
+            </div>
         </div>
+
     )
 }
 
